@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: Inter for modern, clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="calculator-wrapper">
+    <div class="calculator-card" role="region" aria-label="Calculator">
+      <!-- Calculator Header -->
+      <header class="calculator-header">
+        <div class="header-indicator">
+          <span class="status-dot"></span>
+          <span class="calc-brand">CALC // PRO</span>
+        </div>
+        <div class="header-actions">
+          <span class="keyboard-badge" title="Physical keyboard input is enabled">⌨ Keyboard Active</span>
+        </div>
+      </header>
+
+      <!-- Calculator Display Screen -->
+      <section class="calculator-display" aria-live="polite">
+        <div class="previous-expression" id="previous-operand" aria-label="Previous expression"></div>
+        <div class="current-input-row">
+          <span class="active-operator" id="active-operator" aria-hidden="true"></span>
+          <div class="current-value" id="current-operand" aria-label="Current value">0</div>
+        </div>
+      </section>
+
+      <!-- Calculator Keypad (5x4 Grid) -->
+      <section class="calculator-keypad" role="grid" aria-label="Calculator keypad">
+        <!-- Row 1 -->
+        <button type="button" class="btn btn-secondary btn-ac" data-action="clear" aria-label="All Clear" title="Clear all (Esc)">AC</button>
+        <button type="button" class="btn btn-secondary" data-action="delete" aria-label="Delete last digit" title="Backspace (Backspace)">DEL</button>
+        <button type="button" class="btn btn-secondary" data-action="percent" aria-label="Percentage" title="Percent (%)">%</button>
+        <button type="button" class="btn btn-operator" data-operator="÷" aria-label="Divide" title="Divide (/)">÷</button>
+
+        <!-- Row 2 -->
+        <button type="button" class="btn btn-number" data-number="7" aria-label="7">7</button>
+        <button type="button" class="btn btn-number" data-number="8" aria-label="8">8</button>
+        <button type="button" class="btn btn-number" data-number="9" aria-label="9">9</button>
+        <button type="button" class="btn btn-operator" data-operator="×" aria-label="Multiply" title="Multiply (*)">×</button>
+
+        <!-- Row 3 -->
+        <button type="button" class="btn btn-number" data-number="4" aria-label="4">4</button>
+        <button type="button" class="btn btn-number" data-number="5" aria-label="5">5</button>
+        <button type="button" class="btn btn-number" data-number="6" aria-label="6">6</button>
+        <button type="button" class="btn btn-operator" data-operator="−" aria-label="Subtract" title="Subtract (-)">−</button>
+
+        <!-- Row 4 -->
+        <button type="button" class="btn btn-number" data-number="1" aria-label="1">1</button>
+        <button type="button" class="btn btn-number" data-number="2" aria-label="2">2</button>
+        <button type="button" class="btn btn-number" data-number="3" aria-label="3">3</button>
+        <button type="button" class="btn btn-operator" data-operator="+" aria-label="Add" title="Add (+)">+</button>
+
+        <!-- Row 5 -->
+        <button type="button" class="btn btn-secondary" data-action="negate" aria-label="Positive / Negative toggle" title="Toggle sign (+/-)">±</button>
+        <button type="button" class="btn btn-number" data-number="0" aria-label="0">0</button>
+        <button type="button" class="btn btn-number" data-action="decimal" aria-label="Decimal point" title="Decimal (.)">.</button>
+        <button type="button" class="btn btn-equals" data-action="calculate" aria-label="Equals" title="Calculate (Enter)">=</button>
+      </section>
+
+      
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
